@@ -1,11 +1,6 @@
-add Modern Fintech Dashboard with Monorepo Architecture (FNB-Inspired UX)
-Modern Fintech Dashboard with Monorepo Architecture
+# Modern Fintech Dashboard with Monorepo Architecture
 A sophisticated, FNB-inspired fintech dashboard built with a modern monorepo architecture. Features secure enterprise-grade authentication, real-time financial data, comprehensive analytics, and a scalable microservices-ready foundation.
 
-https://img.shields.io/badge/license-MIT-blue.svg
-https://img.shields.io/badge/node-%253E%253D18.0.0-brightgreen.svg
-https://img.shields.io/badge/react-18.2.0-blue.svg
-https://img.shields.io/badge/architecture-monorepo-orange.svg
 
 🏦 FNB-Inspired User Experience
 🎯 Core Banking Features
