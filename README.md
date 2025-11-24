@@ -1,126 +1,203 @@
-Modern Fintech Dashboard
-A modern, responsive fintech dashboard built with a monorepo architecture, featuring secure authentication, real-time account management, transaction tracking, and comprehensive analytics.
+add Modern Fintech Dashboard with Monorepo Architecture (FNB-Inspired UX)
+Modern Fintech Dashboard with Monorepo Architecture
+A sophisticated, FNB-inspired fintech dashboard built with a modern monorepo architecture. Features secure enterprise-grade authentication, real-time financial data, comprehensive analytics, and a scalable microservices-ready foundation.
 
 https://img.shields.io/badge/license-MIT-blue.svg
 https://img.shields.io/badge/node-%253E%253D18.0.0-brightgreen.svg
 https://img.shields.io/badge/react-18.2.0-blue.svg
+https://img.shields.io/badge/architecture-monorepo-orange.svg
 
-🚀 Features
-🔐 Authentication & Security
-Secure JWT-based authentication
+🏦 FNB-Inspired User Experience
+🎯 Core Banking Features
+Personal & Business Accounts - Seamless multi-account management
 
-Role-based access control
+Real-time Balance Overview - Instant account balance updates
 
-Session management
+Transaction Categorization - Smart transaction classification
 
-Password encryption
+Quick Transfers - FNB-style fast money transfers
+
+Bill Payments - Scheduled and one-time payment management
+
+Card Management - Virtual and physical card controls
+
+📱 Premium UX Elements
+Dark/Light Theme - Bank-grade interface theming
+
+Responsive Design - Mobile-first banking experience
+
+Quick Actions - FNB-inspired quick transaction shortcuts
+
+Financial Insights - AI-powered spending analytics
+
+Security Dashboard - Real-time security monitoring
+
+Notification Center - Smart alert system
+
+🚀 Feature Highlights
+🔐 Enterprise Security
+Multi-factor Authentication (SMS, Email, Authenticator App)
+
+Biometric Login Support (Face ID, Fingerprint)
+
+Session Management with device tracking
+
+Advanced Encryption (AES-256 for sensitive data)
+
+Security Questionnaires for high-value transactions
 
 💳 Account Management
-Real-time account balance overview
+Real-time Account Overview with quick actions
 
-Multi-account support
+Multi-currency Support with live exchange rates
 
-Account transaction history
+Account Statements with export capabilities
 
-Account details and settings
+Beneficiary Management with quick-add functionality
 
-💰 Transactions
-Real-time transaction tracking
+Account Switching - seamless between personal/business
 
-Transaction categorization
+💰 Transaction System
+Instant Transfers between own accounts
 
-Search and filter capabilities
+Third-party Payments with beneficiary validation
 
-Export transaction history
+Scheduled Payments with recurrence options
 
-📊 Analytics & Insights
-Interactive financial charts
+Transaction Limits with customizable thresholds
 
-Spending analytics and trends
+Smart Search with advanced filtering
 
-Income vs. expense visualization
+📊 Advanced Analytics
+Spending Analysis with category breakdowns
 
-Customizable reporting periods
+Income vs Expense visualization
 
-Financial health metrics
+Budget Tracking with alert system
 
-🏗️ Architecture
-Monorepo structure using Turborepo
+Financial Health Score with improvement tips
 
-Scalable and maintainable codebase
+Wealth Projection with growth forecasting
 
-Shared components and utilities
+🏗️ Monorepo Architecture Benefits
+Shared Code Reusability across frontend and backend
 
-Independent service deployment
+Consistent Tooling and development experience
+
+Simplified Dependency Management
+
+Microservices Ready for enterprise scaling
+
+Unified CI/CD pipeline
 
 🛠️ Tech Stack
-Frontend
-React 18 - UI framework
+Frontend Applications
+React 18 with TypeScript
 
-TypeScript - Type safety
+Next.js 14 (App Router) for web application
 
-Tailwind CSS - Styling
+React Native for mobile apps
 
-Chart.js - Data visualization
+Tailwind CSS with custom FNB-inspired design system
 
-React Query - Data fetching
+Framer Motion for smooth animations
 
-React Hook Form - Form management
+TanStack Query for server state management
 
-Framer Motion - Animations
+Zustand for client state management
 
-Backend
-Node.js - Runtime environment
+Backend Services
+Node.js with TypeScript
 
-Express.js - Web framework
+Express.js with modular architecture
 
-TypeScript - Type safety
+Nest.js for structured microservices
 
-JWT - Authentication
+Socket.io for real-time features
 
-bcrypt - Password hashing
+GraphQL with Apollo Server (alternative to REST)
 
-Database
-MySQL - Primary database
+Database & Storage
+MySQL 8.0 with transactions and ACID compliance
 
-Prisma - ORM
+Redis for caching and session storage
 
-Redis - Caching & sessions
+Prisma as database ORM
 
-Development Tools
-Turborepo - Monorepo management
+Elasticsearch for transaction search
 
-ESLint - Code linting
+Development & DevOps
+Turborepo for monorepo management
 
-Prettier - Code formatting
+Docker with multi-stage builds
 
-Husky - Git hooks
+Kubernetes for orchestration
 
-📁 Project Structure
+GitHub Actions for CI/CD
+
+Jest and Testing Library for testing
+
+Storybook for component development
+
+📁 Monorepo Structure
 text
-fintech-dashboard/
+fintech-monorepo/
 ├── apps/
-│   ├── web/                 # React frontend application
+│   ├── web/                          # Next.js web application
 │   │   ├── src/
-│   │   │   ├── components/  # Reusable UI components
-│   │   │   ├── pages/       # Page components
-│   │   │   ├── hooks/       # Custom React hooks
-│   │   │   ├── utils/       # Utility functions
-│   │   │   └── types/       # TypeScript type definitions
+│   │   │   ├── app/                 # App router pages
+│   │   │   ├── components/          # Page-specific components
+│   │   │   ├── lib/                 # Web-specific utilities
+│   │   │   └── types/               # Web-specific types
 │   │   └── package.json
-│   └── api/                 # Node.js backend API
+│   ├── mobile/                       # React Native application
+│   │   ├── src/
+│   │   │   ├── screens/             # Mobile screens
+│   │   │   ├── navigation/          # React Navigation
+│   │   │   └── components/          # Mobile-specific components
+│   │   └── package.json
+│   └── api/                          # Backend API gateway
 │       ├── src/
-│       │   ├── controllers/ # Route controllers
-│       │   ├── middleware/  # Express middleware
-│       │   ├── routes/      # API routes
-│       │   ├── services/    # Business logic
-│       │   └── utils/       # Utility functions
+│       │   ├── modules/             # Feature modules
+│       │   ├── middleware/          # Auth, validation, etc.
+│       │   ├── utils/               # API utilities
+│       │   └── config/              # API configuration
 │       └── package.json
 ├── packages/
-│   ├── ui/                  # Shared UI components
-│   ├── utils/               # Shared utilities
-│   ├── database/            # Database configuration & types
-│   └── config/              # Shared configuration
+│   ├── ui/                           # Shared UI components
+│   │   ├── src/
+│   │   │   ├── components/          # Reusable components
+│   │   │   ├── styles/              # Tailwind config, themes
+│   │   │   └── stories/             # Storybook stories
+│   │   └── package.json
+│   ├── utils/                        # Shared utilities
+│   │   ├── src/
+│   │   │   ├── constants/           # App constants
+│   │   │   ├── helpers/             # Helper functions
+│   │   │   └── validators/          # Validation schemas
+│   │   └── package.json
+│   ├── database/                     # Database package
+│   │   ├── src/
+│   │   │   ├── schema/              # Prisma schema
+│   │   │   ├── migrations/          # Database migrations
+│   │   │   └── seeds/               # Seed data
+│   │   └── package.json
+│   ├── types/                        # Shared TypeScript types
+│   │   ├── src/
+│   │   │   ├── api/                 # API types
+│   │   │   ├── database/            # Database types
+│   │   │   └── common/              # Common types
+│   │   └── package.json
+│   └── config/                       # Configuration package
+│       ├── src/
+│       │   ├── environment/         # Environment configs
+│       │   ├── features/            # Feature flags
+│       │   └── constants/           # Config constants
+│       └── package.json
+├── tools/
+│   ├── scripts/                      # Build and deployment scripts
+│   └── generators/                   # Code generators
+├── docker-compose.yml
 ├── package.json
 └── turbo.json
 🚀 Getting Started
@@ -131,143 +208,185 @@ MySQL 8.0 or higher
 
 Redis 6.0 or higher
 
-Installation
-Clone the repository
+Docker and Docker Compose (recommended)
 
+Quick Start with Docker
 bash
-git clone https://github.com/your-username/fintech-dashboard.git
-cd fintech-dashboard
-Install dependencies
+# Clone the repository
+git clone https://github.com/your-username/fintech-monorepo.git
+cd fintech-monorepo
+
+# Copy environment files
+cp .env.example .env
+cp apps/api/.env.example apps/api/.env
+cp apps/web/.env.example apps/web/.env
+
+# Start all services with Docker
+docker-compose up -d
+
+# Access the applications
+# Web: http://localhost:3000
+# API: http://localhost:3001
+# MySQL: localhost:3306
+# Redis: localhost:6379
+Manual Installation
+Install Dependencies
 
 bash
 npm install
 Environment Setup
 
-Copy the environment example files and configure them:
-
 bash
-# Backend environment
+# Root environment
+cp .env.example .env
+
+# API environment
 cp apps/api/.env.example apps/api/.env
 
-# Frontend environment
+# Web environment
 cp apps/web/.env.example apps/web/.env
-Configure the environment variables:
-
-Backend (.env)
-
-env
-DATABASE_URL="mysql://username:password@localhost:3306/fintech_db"
-JWT_SECRET="your-jwt-secret-key"
-REDIS_URL="redis://localhost:6379"
-PORT=3001
-NODE_ENV=development
-Frontend (.env)
-
-env
-VITE_API_URL=http://localhost:3001
-VITE_APP_NAME="Fintech Dashboard"
 Database Setup
 
 bash
-# Create database
-mysql -u root -p -e "CREATE DATABASE fintech_db;"
+# Start MySQL and Redis
+docker-compose up mysql redis -d
 
-# Run migrations
-npm run db:push
+# Run database migrations
+npm run db:migrate
 
-# Seed with sample data (optional)
+# Seed with sample banking data
 npm run db:seed
-Start Development Servers
+Start Development
 
 bash
-# Start all services in development mode
+# Start all applications
 npm run dev
 
-# Or start individually
-npm run dev:web    # Frontend only (http://localhost:3000)
-npm run dev:api    # Backend only (http://localhost:3001)
+# Or start specific applications
+npm run dev:web    # http://localhost:3000
+npm run dev:api    # http://localhost:3001
+npm run dev:mobile # React Native dev server
 📚 Available Scripts
-Root Level Scripts
+Development
 bash
-npm run dev          # Start all services in development
-npm run build        # Build all packages and apps
-npm run test         # Run tests across all packages
-npm run lint         # Lint all packages and apps
-npm run clean        # Clean all build artifacts
-Frontend (apps/web)
+npm run dev              # Start all applications
+npm run dev:web          # Start web application only
+npm run dev:api          # Start API server only
+npm run dev:mobile       # Start mobile development server
+npm run storybook        # Start Storybook for UI development
+Building
 bash
-npm run dev:web      # Start frontend development server
-npm run build:web    # Build frontend for production
-npm run preview:web  # Preview production build
-Backend (apps/api)
+npm run build            # Build all applications
+npm run build:web        # Build web application
+npm run build:api        # Build API server
+npm run build:mobile     # Build mobile application
+Testing
 bash
-npm run dev:api      # Start backend development server
-npm run build:api    # Build backend for production
-npm run start:api    # Start production server
+npm run test             # Run all tests
+npm run test:web         # Test web application
+npm run test:api         # Test API server
+npm run test:ui          # Test UI components
+npm run test:e2e         # Run end-to-end tests
 Database
 bash
-npm run db:push      # Push schema changes to database
-npm run db:studio    # Open Prisma Studio
-npm run db:seed      # Seed database with sample data
+npm run db:migrate       # Run database migrations
+npm run db:seed          # Seed database with sample data
+npm run db:studio        # Open Prisma Studio
+npm run db:reset         # Reset database (development only)
+Code Quality
+bash
+npm run lint             # Lint all packages
+npm run type-check       # Type check all packages
+npm run format           # Format code with Prettier
 🗄️ Database Schema
-Key entities include:
+Core Entities
+Users - Customer profiles and authentication
 
-Users - User accounts and profiles
+Accounts - Bank accounts (savings, checking, credit)
 
-Accounts - Financial accounts (checking, savings, etc.)
+Transactions - Financial transactions with categorization
 
-Transactions - Financial transactions
+Beneficiaries - Saved payment recipients
 
-Categories - Transaction categories
+Cards - Debit and credit cards
 
 Budgets - User budgeting information
 
-🔒 Security Features
-JWT token-based authentication
+Security Entities
+Sessions - User login sessions
 
-Password hashing with bcrypt
+SecurityLogs - Authentication and security events
 
-CORS configuration
+OTPCodes - One-time password storage
 
-Helmet.js security headers
+🔒 Security Implementation
+Authentication & Authorization
+JWT-based authentication with refresh tokens
 
-Input validation and sanitization
+Role-based access control (Customer, Admin, Support)
 
-Rate limiting on API endpoints
+Biometric authentication support
 
-🧪 Testing
+Session management with device tracking
+
+Data Protection
+End-to-end encryption for sensitive data
+
+PCI DSS compliance for card data
+
+GDPR-compliant data handling
+
+Regular security audits and penetration testing
+
+Security Features
+Transaction signing for high-value transfers
+
+Fraud detection with machine learning
+
+Real-time security alerts
+
+Auto-logout on inactivity
+
+🧪 Testing Strategy
+Test Pyramid Implementation
 bash
-# Run all tests
-npm run test
+# Unit Tests
+npm run test:unit        # Jest unit tests
 
-# Run tests with coverage
-npm run test:coverage
+# Integration Tests
+npm run test:integration # API integration tests
 
-# Run specific package tests
-npm run test:web
-npm run test:api
+# E2E Tests
+npm run test:e2e         # Playwright E2E tests
+
+# Performance Tests
+npm run test:performance # Lighthouse CI
 📦 Deployment
 Production Build
 bash
-# Build all applications
-npm run build
-
-# Start production servers
-npm run start
-Docker Deployment
-bash
-# Build and start with Docker Compose
-docker-compose up --build
-Environment-specific Builds
-bash
-# Production build
+# Build all applications for production
 npm run build:production
 
-# Staging build
-npm run build:staging
-🤝 Contributing
-We welcome contributions! Please see our Contributing Guide for details.
+# Start production servers
+npm run start:production
+Docker Deployment
+bash
+# Build and deploy with Docker
+docker-compose -f docker-compose.prod.yml up -d
 
+# Kubernetes deployment (if configured)
+kubectl apply -f k8s/
+Environment-specific Deployments
+bash
+# Staging deployment
+npm run deploy:staging
+
+# Production deployment
+npm run deploy:production
+🤝 Contributing
+We welcome contributions from the community! Please read our Contributing Guide for details.
+
+Development Workflow
 Fork the repository
 
 Create a feature branch (git checkout -b feature/amazing-feature)
@@ -278,24 +397,67 @@ Push to the branch (git push origin feature/amazing-feature)
 
 Open a Pull Request
 
+Code Standards
+TypeScript strictly enforced
+
+ESLint and Prettier for code quality
+
+Conventional commits for commit messages
+
+PR templates for consistent reviews
+
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 🆘 Support
-If you encounter any issues or have questions:
+Documentation
+API Documentation
 
-Check the Troubleshooting Guide
+Architecture Decision Records
+
+Deployment Guide
+
+Troubleshooting Guide
+
+Getting Help
+Check our FAQ
 
 Search existing GitHub Issues
 
 Create a new issue with detailed information
 
+Join our Discord community
+
 🙏 Acknowledgments
-Icons from Lucide React
+FNB South Africa for UX/UI inspiration
 
-UI components inspired by shadcn/ui
+Turborepo team for excellent monorepo tooling
 
-Charts powered by Chart.js
+Prisma team for fantastic database ORM
 
-Built with ❤️ using modern web technologies
+Vercel for Next.js and deployment platform
 
+Tailwind CSS for utility-first CSS framework
+
+Built with ❤️ for modern fintech applications. Enterprise-ready, user-focused, and developer-friendly.
+
+🎯 Quick Start Demo
+After setup, you can log in with these demo credentials:
+
+Email: demo@fnb.com
+
+Password: demo123
+
+Explore features like:
+
+Real-time balance updates
+
+Transaction history with smart categorization
+
+Transfer money between accounts
+
+Financial analytics and insights
+
+Security settings and preferences
+
+Happy banking! 🚀
