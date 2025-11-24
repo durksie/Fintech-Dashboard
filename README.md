@@ -93,33 +93,7 @@ Prettier - Code formatting
 
 Husky - Git hooks
 
-📁 Project Structure
-text
-fintech-dashboard/
-├── apps/
-│   ├── web/                 # React frontend application
-│   │   ├── src/
-│   │   │   ├── components/  # Reusable UI components
-│   │   │   ├── pages/       # Page components
-│   │   │   ├── hooks/       # Custom React hooks
-│   │   │   ├── utils/       # Utility functions
-│   │   │   └── types/       # TypeScript type definitions
-│   │   └── package.json
-│   └── api/                 # Node.js backend API
-│       ├── src/
-│       │   ├── controllers/ # Route controllers
-│       │   ├── middleware/  # Express middleware
-│       │   ├── routes/      # API routes
-│       │   ├── services/    # Business logic
-│       │   └── utils/       # Utility functions
-│       └── package.json
-├── packages/
-│   ├── ui/                  # Shared UI components
-│   ├── utils/               # Shared utilities
-│   ├── database/            # Database configuration & types
-│   └── config/              # Shared configuration
-├── package.json
-└── turbo.json
+
 🚀 Getting Started
 Prerequisites
 Node.js 18.0.0 or higher
