@@ -2,197 +2,122 @@
 A sophisticated, FNB-inspired fintech dashboard built with a modern monorepo architecture. Features secure enterprise-grade authentication, real-time financial data, comprehensive analytics, and a scalable microservices-ready foundation.
 
 
-🏦 FNB-Inspired User Experience
-🎯 Core Banking Features
-Personal & Business Accounts - Seamless multi-account management
+🚀 Features
+🔐 Authentication & Security
+Secure JWT-based authentication
 
-Real-time Balance Overview - Instant account balance updates
+Role-based access control
 
-Transaction Categorization - Smart transaction classification
+Session management
 
-Quick Transfers - FNB-style fast money transfers
-
-Bill Payments - Scheduled and one-time payment management
-
-Card Management - Virtual and physical card controls
-
-📱 Premium UX Elements
-Dark/Light Theme - Bank-grade interface theming
-
-Responsive Design - Mobile-first banking experience
-
-Quick Actions - FNB-inspired quick transaction shortcuts
-
-Financial Insights - AI-powered spending analytics
-
-Security Dashboard - Real-time security monitoring
-
-Notification Center - Smart alert system
-
-🚀 Feature Highlights
-🔐 Enterprise Security
-Multi-factor Authentication (SMS, Email, Authenticator App)
-
-Biometric Login Support (Face ID, Fingerprint)
-
-Session Management with device tracking
-
-Advanced Encryption (AES-256 for sensitive data)
-
-Security Questionnaires for high-value transactions
+Password encryption
 
 💳 Account Management
-Real-time Account Overview with quick actions
+Real-time account balance overview
 
-Multi-currency Support with live exchange rates
+Multi-account support
 
-Account Statements with export capabilities
+Account transaction history
 
-Beneficiary Management with quick-add functionality
+Account details and settings
 
-Account Switching - seamless between personal/business
+💰 Transactions
+Real-time transaction tracking
 
-💰 Transaction System
-Instant Transfers between own accounts
+Transaction categorization
 
-Third-party Payments with beneficiary validation
+Search and filter capabilities
 
-Scheduled Payments with recurrence options
+Export transaction history
 
-Transaction Limits with customizable thresholds
+📊 Analytics & Insights
+Interactive financial charts
 
-Smart Search with advanced filtering
+Spending analytics and trends
 
-📊 Advanced Analytics
-Spending Analysis with category breakdowns
+Income vs. expense visualization
 
-Income vs Expense visualization
+Customizable reporting periods
 
-Budget Tracking with alert system
+Financial health metrics
 
-Financial Health Score with improvement tips
+🏗️ Architecture
+Monorepo structure using Turborepo
 
-Wealth Projection with growth forecasting
+Scalable and maintainable codebase
 
-🏗️ Monorepo Architecture Benefits
-Shared Code Reusability across frontend and backend
+Shared components and utilities
 
-Consistent Tooling and development experience
+Independent service deployment
 
-Simplified Dependency Management
+# 🛠️ Tech Stack
+## Frontend
+React 18 - UI framework
 
-Microservices Ready for enterprise scaling
+TypeScript - Type safety
 
-Unified CI/CD pipeline
+Tailwind CSS - Styling
 
-🛠️ Tech Stack
-Frontend Applications
-React 18 with TypeScript
+Chart.js - Data visualization
 
-Next.js 14 (App Router) for web application
+React Query - Data fetching
 
-React Native for mobile apps
+React Hook Form - Form management
 
-Tailwind CSS with custom FNB-inspired design system
+Framer Motion - Animations
 
-Framer Motion for smooth animations
+## Backend
+Node.js - Runtime environment
 
-TanStack Query for server state management
+Express.js - Web framework
 
-Zustand for client state management
+TypeScript - Type safety
 
-Backend Services
-Node.js with TypeScript
+JWT - Authentication
 
-Express.js with modular architecture
+bcrypt - Password hashing
 
-Nest.js for structured microservices
+Database
+MySQL - Primary database
 
-Socket.io for real-time features
+Prisma - ORM
 
-GraphQL with Apollo Server (alternative to REST)
+Redis - Caching & sessions
 
-Database & Storage
-MySQL 8.0 with transactions and ACID compliance
+Development Tools
+Turborepo - Monorepo management
 
-Redis for caching and session storage
+ESLint - Code linting
 
-Prisma as database ORM
+Prettier - Code formatting
 
-Elasticsearch for transaction search
+Husky - Git hooks
 
-Development & DevOps
-Turborepo for monorepo management
-
-Docker with multi-stage builds
-
-Kubernetes for orchestration
-
-GitHub Actions for CI/CD
-
-Jest and Testing Library for testing
-
-Storybook for component development
-
-📁 Monorepo Structure
+📁 Project Structure
 text
-fintech-monorepo/
+fintech-dashboard/
 ├── apps/
-│   ├── web/                          # Next.js web application
+│   ├── web/                 # React frontend application
 │   │   ├── src/
-│   │   │   ├── app/                 # App router pages
-│   │   │   ├── components/          # Page-specific components
-│   │   │   ├── lib/                 # Web-specific utilities
-│   │   │   └── types/               # Web-specific types
+│   │   │   ├── components/  # Reusable UI components
+│   │   │   ├── pages/       # Page components
+│   │   │   ├── hooks/       # Custom React hooks
+│   │   │   ├── utils/       # Utility functions
+│   │   │   └── types/       # TypeScript type definitions
 │   │   └── package.json
-│   ├── mobile/                       # React Native application
-│   │   ├── src/
-│   │   │   ├── screens/             # Mobile screens
-│   │   │   ├── navigation/          # React Navigation
-│   │   │   └── components/          # Mobile-specific components
-│   │   └── package.json
-│   └── api/                          # Backend API gateway
+│   └── api/                 # Node.js backend API
 │       ├── src/
-│       │   ├── modules/             # Feature modules
-│       │   ├── middleware/          # Auth, validation, etc.
-│       │   ├── utils/               # API utilities
-│       │   └── config/              # API configuration
+│       │   ├── controllers/ # Route controllers
+│       │   ├── middleware/  # Express middleware
+│       │   ├── routes/      # API routes
+│       │   ├── services/    # Business logic
+│       │   └── utils/       # Utility functions
 │       └── package.json
 ├── packages/
-│   ├── ui/                           # Shared UI components
-│   │   ├── src/
-│   │   │   ├── components/          # Reusable components
-│   │   │   ├── styles/              # Tailwind config, themes
-│   │   │   └── stories/             # Storybook stories
-│   │   └── package.json
-│   ├── utils/                        # Shared utilities
-│   │   ├── src/
-│   │   │   ├── constants/           # App constants
-│   │   │   ├── helpers/             # Helper functions
-│   │   │   └── validators/          # Validation schemas
-│   │   └── package.json
-│   ├── database/                     # Database package
-│   │   ├── src/
-│   │   │   ├── schema/              # Prisma schema
-│   │   │   ├── migrations/          # Database migrations
-│   │   │   └── seeds/               # Seed data
-│   │   └── package.json
-│   ├── types/                        # Shared TypeScript types
-│   │   ├── src/
-│   │   │   ├── api/                 # API types
-│   │   │   ├── database/            # Database types
-│   │   │   └── common/              # Common types
-│   │   └── package.json
-│   └── config/                       # Configuration package
-│       ├── src/
-│       │   ├── environment/         # Environment configs
-│       │   ├── features/            # Feature flags
-│       │   └── constants/           # Config constants
-│       └── package.json
-├── tools/
-│   ├── scripts/                      # Build and deployment scripts
-│   └── generators/                   # Code generators
-├── docker-compose.yml
+│   ├── ui/                  # Shared UI components
+│   ├── utils/               # Shared utilities
+│   ├── database/            # Database configuration & types
+│   └── config/              # Shared configuration
 ├── package.json
 └── turbo.json
 🚀 Getting Started
@@ -203,256 +128,112 @@ MySQL 8.0 or higher
 
 Redis 6.0 or higher
 
-Docker and Docker Compose (recommended)
+Installation
+Clone the repository
 
-Quick Start with Docker
 bash
-# Clone the repository
-git clone https://github.com/your-username/fintech-monorepo.git
-cd fintech-monorepo
-
-# Copy environment files
-cp .env.example .env
-cp apps/api/.env.example apps/api/.env
-cp apps/web/.env.example apps/web/.env
-
-# Start all services with Docker
-docker-compose up -d
-
-# Access the applications
-# Web: http://localhost:3000
-# API: http://localhost:3001
-# MySQL: localhost:3306
-# Redis: localhost:6379
-Manual Installation
-Install Dependencies
+git clone https://github.com/your-username/fintech-dashboard.git
+cd fintech-dashboard
+Install dependencies
 
 bash
 npm install
 Environment Setup
 
-bash
-# Root environment
-cp .env.example .env
+Copy the environment example files and configure them:
 
-# API environment
+bash
+# Backend environment
 cp apps/api/.env.example apps/api/.env
 
-# Web environment
+# Frontend environment
 cp apps/web/.env.example apps/web/.env
+Configure the environment variables:
+
+Backend (.env)
+
+env
+DATABASE_URL="mysql://username:password@localhost:3306/fintech_db"
+JWT_SECRET="your-jwt-secret-key"
+REDIS_URL="redis://localhost:6379"
+PORT=3001
+NODE_ENV=development
+Frontend (.env)
+
+env
+VITE_API_URL=http://localhost:3001
+VITE_APP_NAME="Fintech Dashboard"
 Database Setup
 
 bash
-# Start MySQL and Redis
-docker-compose up mysql redis -d
+# Create database
+mysql -u root -p -e "CREATE DATABASE fintech_db;"
 
-# Run database migrations
-npm run db:migrate
+# Run migrations
+npm run db:push
 
-# Seed with sample banking data
+# Seed with sample data (optional)
 npm run db:seed
-Start Development
+Start Development Servers
 
 bash
-# Start all applications
+# Start all services in development mode
 npm run dev
 
-# Or start specific applications
-npm run dev:web    # http://localhost:3000
-npm run dev:api    # http://localhost:3001
-npm run dev:mobile # React Native dev server
-📚 Available Scripts
-Development
+# Or start individually
+npm run dev:web    # Frontend only (http://localhost:3000)
+npm run dev:api    # Backend only (http://localhost:3001)
+# 📚 Available Scripts
+Root Level Scripts
 bash
-npm run dev              # Start all applications
-npm run dev:web          # Start web application only
-npm run dev:api          # Start API server only
-npm run dev:mobile       # Start mobile development server
-npm run storybook        # Start Storybook for UI development
-Building
+npm run dev          # Start all services in development
+npm run build        # Build all packages and apps
+npm run test         # Run tests across all packages
+npm run lint         # Lint all packages and apps
+npm run clean        # Clean all build artifacts
+Frontend (apps/web)
 bash
-npm run build            # Build all applications
-npm run build:web        # Build web application
-npm run build:api        # Build API server
-npm run build:mobile     # Build mobile application
-Testing
+npm run dev:web      # Start frontend development server
+npm run build:web    # Build frontend for production
+npm run preview:web  # Preview production build
+Backend (apps/api)
 bash
-npm run test             # Run all tests
-npm run test:web         # Test web application
-npm run test:api         # Test API server
-npm run test:ui          # Test UI components
-npm run test:e2e         # Run end-to-end tests
+npm run dev:api      # Start backend development server
+npm run build:api    # Build backend for production
+npm run start:api    # Start production server
 Database
 bash
-npm run db:migrate       # Run database migrations
-npm run db:seed          # Seed database with sample data
-npm run db:studio        # Open Prisma Studio
-npm run db:reset         # Reset database (development only)
-Code Quality
-bash
-npm run lint             # Lint all packages
-npm run type-check       # Type check all packages
-npm run format           # Format code with Prettier
+npm run db:push      # Push schema changes to database
+npm run db:studio    # Open Prisma Studio
+npm run db:seed      # Seed database with sample data
 🗄️ Database Schema
-Core Entities
-Users - Customer profiles and authentication
+## Key entities include:
 
-Accounts - Bank accounts (savings, checking, credit)
+Users - User accounts and profiles
 
-Transactions - Financial transactions with categorization
+Accounts - Financial accounts (checking, savings, etc.)
 
-Beneficiaries - Saved payment recipients
+Transactions - Financial transactions
 
-Cards - Debit and credit cards
+Categories - Transaction categories
 
 Budgets - User budgeting information
 
-Security Entities
-Sessions - User login sessions
+## 🔒 Security Features
+JWT token-based authentication
 
-SecurityLogs - Authentication and security events
+Password hashing with bcrypt
 
-OTPCodes - One-time password storage
+CORS configuration
 
-🔒 Security Implementation
-Authentication & Authorization
-JWT-based authentication with refresh tokens
+Helmet.js security headers
 
-Role-based access control (Customer, Admin, Support)
+Input validation and sanitization
 
-Biometric authentication support
+Rate limiting on API endpoints
 
-Session management with device tracking
 
-Data Protection
-End-to-end encryption for sensitive data
 
-PCI DSS compliance for card data
 
-GDPR-compliant data handling
+Built with ❤️ using modern web technologies
 
-Regular security audits and penetration testing
-
-Security Features
-Transaction signing for high-value transfers
-
-Fraud detection with machine learning
-
-Real-time security alerts
-
-Auto-logout on inactivity
-
-🧪 Testing Strategy
-Test Pyramid Implementation
-bash
-# Unit Tests
-npm run test:unit        # Jest unit tests
-
-# Integration Tests
-npm run test:integration # API integration tests
-
-# E2E Tests
-npm run test:e2e         # Playwright E2E tests
-
-# Performance Tests
-npm run test:performance # Lighthouse CI
-📦 Deployment
-Production Build
-bash
-# Build all applications for production
-npm run build:production
-
-# Start production servers
-npm run start:production
-Docker Deployment
-bash
-# Build and deploy with Docker
-docker-compose -f docker-compose.prod.yml up -d
-
-# Kubernetes deployment (if configured)
-kubectl apply -f k8s/
-Environment-specific Deployments
-bash
-# Staging deployment
-npm run deploy:staging
-
-# Production deployment
-npm run deploy:production
-🤝 Contributing
-We welcome contributions from the community! Please read our Contributing Guide for details.
-
-Development Workflow
-Fork the repository
-
-Create a feature branch (git checkout -b feature/amazing-feature)
-
-Commit your changes (git commit -m 'Add some amazing feature')
-
-Push to the branch (git push origin feature/amazing-feature)
-
-Open a Pull Request
-
-Code Standards
-TypeScript strictly enforced
-
-ESLint and Prettier for code quality
-
-Conventional commits for commit messages
-
-PR templates for consistent reviews
-
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-🆘 Support
-Documentation
-API Documentation
-
-Architecture Decision Records
-
-Deployment Guide
-
-Troubleshooting Guide
-
-Getting Help
-Check our FAQ
-
-Search existing GitHub Issues
-
-Create a new issue with detailed information
-
-Join our Discord community
-
-🙏 Acknowledgments
-FNB South Africa for UX/UI inspiration
-
-Turborepo team for excellent monorepo tooling
-
-Prisma team for fantastic database ORM
-
-Vercel for Next.js and deployment platform
-
-Tailwind CSS for utility-first CSS framework
-
-Built with ❤️ for modern fintech applications. Enterprise-ready, user-focused, and developer-friendly.
-
-🎯 Quick Start Demo
-After setup, you can log in with these demo credentials:
-
-Email: demo@fnb.com
-
-Password: demo123
-
-Explore features like:
-
-Real-time balance updates
-
-Transaction history with smart categorization
-
-Transfer money between accounts
-
-Financial analytics and insights
-
-Security settings and preferences
-
-Happy banking! 🚀
